@@ -1,7 +1,7 @@
 # isc-bind-container
 ISC Bind container on Centos 7
 
-Source file to build ISC Bind container based on Centos 7 release
+Source file to build ISC Bind container based on Centos 7 release: clone repository and execute ./build.sh to make container image
 
 ## Start recurse dns:
 
