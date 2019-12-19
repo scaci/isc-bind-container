@@ -20,11 +20,9 @@ RUN chown root:named /etc/named.ca && chmod u=rw,g=wr,o= /etc/named.ca; \
 
 EXPOSE 53/udp 53/tcp
 
-ENV OPTIONS -4
-
 VOLUME ["/etc"]
 VOLUME ["/var/named"]
 
 COPY entrypoint.sh /sbin
 RUN ln -s /sbin/entrypoint.sh /
-ENTRYPOINT ["entrypoint.sh", "sh", "-c", "echo $OPTIONS"]
+ENTRYPOINT ["entrypoint.sh"]
