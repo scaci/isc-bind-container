@@ -19,7 +19,7 @@ chmod u=rw,g=wr,o= /etc/named.root.key
 chown root:named /etc/rndc.key
 chmod u=rw,g=r,o= /etc/rndc.key
 chown named:named /var/named/named.empty
-chmod u=rw,g=wr,o= /var/named/named.empy
+chmod u=rw,g=wr,o= /var/named/named.empty
 chown named:named /var/named/named.localhost
 chmod u=rw,g=wr,o= /var/named/named.localhost
 chown named:named /var/named/named.loopback
