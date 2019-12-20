@@ -1,0 +1,21 @@
+version: '3.2'
+
+services:
+
+  dns:
+    build: .
+    ports:
+     - target: 53
+       published: 53
+       protocol: udp
+       mode: host
+     - target: 53
+       published: 53
+       protocol: tcp
+       mode: host
+    volumes:
+      - /DATA/etc:/etc
+      - /DATA/var/named:/var/named
+
+  bind:
+    image: "bind-container:alpha"
